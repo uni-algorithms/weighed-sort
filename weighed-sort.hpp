@@ -3,7 +3,6 @@
 
 #include <algorithm>
 #include <fstream>
-#include <iostream>
 #include <numeric>
 #include <unordered_map>
 #include <vector>
@@ -69,7 +68,7 @@ long min_weight(const int acc, const std::vector<int> &cycle) {
     return acc + std::min(sum_with_one, sum_with_min);
 }
 
-long min_weight_cs(std::vector<std::vector<int>> &cycles) {
+long min_weight_cs(const std::vector<std::vector<int>> &cycles) {
     return std::accumulate(cycles.begin(), cycles.end(), 0, min_weight);
 }
 
